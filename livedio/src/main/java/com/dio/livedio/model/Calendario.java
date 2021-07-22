@@ -2,8 +2,7 @@ package com.dio.livedio.model;
 
 import lombok.*;
 
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -11,9 +10,9 @@ import javax.persistence.OneToMany;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class Localidade {
+public class Calendario {
     private Long id;
-    @ManyToOne
-    private NivelAcesso nivelAcesso;
+    private TipoData tipoData;
     private String descricao;
+    private LocalDateTime dataEspecial;
 }
