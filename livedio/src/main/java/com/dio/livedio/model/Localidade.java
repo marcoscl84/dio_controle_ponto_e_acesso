@@ -1,7 +1,10 @@
 package com.dio.livedio.model;
 
+import jdk.jfr.Enabled;
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -11,7 +14,9 @@ import javax.persistence.OneToMany;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Localidade {
+    @Id
     private Long id;
     @ManyToOne
     private NivelAcesso nivelAcesso;
